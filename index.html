@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Single File Upload -->
+
+    <div style="width: 40%; margin: auto; border: 1px solid red; padding: 5px">
+        <h4 style="text-align: center">Single File Upload</h4>
+        <form action="http://localhost:4000/singleProfile" method="post" enctype="multipart/form-data">
+            <input type="file" name="avatar" required />
+            <input type="submit" value="Upload" />
+        </form>
+    </div>
+
+    <!-- Multiple File Upload -->
+
+    <div style="
+        width: 40%;
+        margin: auto;
+        border: 1px solid rgb(36, 36, 193);
+        padding: 5px;
+        margin-top: 10px;
+      ">
+        <h4 style="text-align: center">Multiple File Upload</h4>
+        <form action="http://localhost:4000/galleryImage" method="post" enctype="multipart/form-data">
+            <input type="file" name="gallery" required multiple />
+            <input type="submit" value="Upload" />
+        </form>
+    </div>
+
+    <!-- Multiple File Upload with two input file field -->
+
+    <div style="
+        width: 40%;
+        margin: auto;
+        border: 1px solid rgb(217, 99, 31);
+        padding: 5px;
+        margin-top: 10px;
+      ">
+        <h4 style="text-align: center">
+            Multiple File Upload Profile and Gallery
+        </h4>
+        <form action="http://localhost:4000/profileWithGallery" method="post" enctype="multipart/form-data">
+            <input type="file" name="profilePic" required />
+            <input type="file" name="galleryPic" required multiple />
+            <br />
+            <br />
+            <input type="submit" value="Upload" />
+        </form>
+    </div>
+
+    <!-- Upload input text data-->
+
+    <div style="
+        width: 40%;
+        margin: auto;
+        border: 1px solid rgb(217, 99, 31);
+        padding: 5px;
+        margin-top: 10px;
+      ">
+        <h4 style="text-align: center">Upload input text data</h4>
+        <form action="http://localhost:4000/textData" method="post" enctype="multipart/form-data">
+            <input type="text" name="userName" placeholder="Name" required />
+            <input type="email" name="userEmail" placeholder="Email" required />
+            <br />
+            <br />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+    <!-- Multiple File Upload with specific size and formate-->
+
+    <div style="
+        width: 40%;
+        margin: auto;
+        border: 1px solid rgb(28, 216, 131);
+        padding: 5px;
+        margin-top: 10px;
+      ">
+        <h4 style="text-align: center">
+            Specific Size File Upload and Validation
+        </h4>
+        <form action="http://localhost:4000/validationUpload" method="post" enctype="multipart/form-data">
+            <input type="file" name="validFile" required />
+            <input type="submit" value="Upload" />
+        </form>
+    </div>
+
+    <div style="
+        width: 40%;
+        margin: auto;
+        border: 1px solid rgb(186, 233, 16);
+        padding: 5px;
+        margin-top: 10px;
+      ">
+        <h4 style="text-align: center">
+            Multiple Specific Size File Upload and Validation
+        </h4>
+        <form action="http://localhost:4000/uploadBigfile" method="post" enctype="multipart/form-data">
+            <input type="file" name="userProfile" required />
+            <input type="file" name="userDocument" required />
+            <br />
+            <br />
+            <input type="submit" value="Upload" />
+        </form>
+    </div>
+</body>
+
+</html>
